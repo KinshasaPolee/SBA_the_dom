@@ -18,12 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
     videoElement.addEventListener('mouseover', function () {
-        // Change the background color on mouseover
         videoContainer.style.backgroundColor = '#f0f0f0';
     });
 
     videoElement.addEventListener('mouseout', function () {
-        // Reset the background color on mouseout
         videoContainer.style.backgroundColor = '#ffffff';
     });
 
@@ -31,3 +29,20 @@ document.addEventListener('DOMContentLoaded', function () {
         const imageUrl = bgImageInput.value;
         document.body.style.backgroundImage = "url('image/victoria_monet_photo.jpg')";
     });
+
+    console.log('Window width:', window.innerWidth);
+    console.log('Document URL:', document.URL);
+
+    const emailInput = document.createElement('input');
+    emailInput.type = 'email';
+    emailInput.placeholder = 'Enter your email';
+    emailInput.required = true;
+
+    const submitBtn = document.createElement('button');
+    submitBtn.textContent = 'Submit';
+
+    const form = document.createElement('form');
+    form.appendChild(emailInput);
+    form.appendChild(submitBtn);
+
+    document.body.appendChild(form);
