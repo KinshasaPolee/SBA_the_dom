@@ -46,3 +46,14 @@ document.addEventListener('DOMContentLoaded', function () {
     form.appendChild(submitBtn);
 
     document.body.appendChild(form);
+
+    submitBtn.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        if (emailInput.checkValidity()) {
+            alert('Form submitted successfully!');
+        } else {
+            alert('Please enter a valid email address.');
+        }
+    });
+});
