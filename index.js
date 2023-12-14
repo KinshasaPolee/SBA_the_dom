@@ -17,3 +17,17 @@ document.addEventListener('DOMContentLoaded', function () {
             videoContainer.appendChild(videoElement);
         }
     });
+    videoElement.addEventListener('mouseover', function () {
+        // Change the background color on mouseover
+        videoContainer.style.backgroundColor = '#f0f0f0';
+    });
+
+    videoElement.addEventListener('mouseout', function () {
+        // Reset the background color on mouseout
+        videoContainer.style.backgroundColor = '#ffffff';
+    });
+
+    setBgImageBtn.addEventListener('click', function () {
+        const imageUrl = bgImageInput.value;
+        document.body.style.backgroundImage = "url('image/victoria_monet_photo.jpg')";
+    });
