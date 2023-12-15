@@ -39,6 +39,22 @@ function scrollToSection(sectionId) {
     targetSection.scrollIntoView({ behavior: 'smooth' });
 }
 
+function handleButtonClick() {
+    console.log("Button clicked! You can perform some action here.");
+}
+
+function handleTextInputEnter(event) {
+    if (event.key === 'Enter') {
+    var inputValue = event.target.value;
+    console.log("Enter key pressed! Input value: " + inputValue);
+    }
+}
+
+var buttonElement = document.getElementById('button1');
+    buttonElement.addEventListener('click', handleButtonClick);
+
+    var textInputElement = document.getElementById('textInput');
+    textInputElement.addEventListener('keydown', handleTextInputEnter);
 
 // function onYouTubeIframeAPIReady() {
 //     var player = new YT.Player('youtube-video-container', {
