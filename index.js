@@ -20,7 +20,7 @@ function createTemplate() {
     let fragment = document.createDocumentFragment();
     let template = document.createElement('template');
 
-    template.innerHTML = '<p>Music is life! Always and forever and ever and ever and ever!</p>';
+    template.innerHTML = '<p></p>';
 
     let clone = template.content.cloneNode(true);
     fragment.appendChild(clone);
@@ -32,10 +32,13 @@ function createTemplate() {
 createTemplate();
 
 function scrollToSection(sectionId) {
-    let targetSection = document.getElementById;
-    targetSection.scrollIntoView({ behavior:
-    'smooth' });
+    // Get the target section
+    var targetSection = document.getElementById(sectionId);
+
+    // Scroll to the target section
+    targetSection.scrollIntoView({ behavior: 'smooth' });
 }
+
 
 // function onYouTubeIframeAPIReady() {
 //     var player = new YT.Player('youtube-video-container', {
